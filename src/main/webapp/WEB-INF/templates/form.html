@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Modifier la pièce</title>
+	</head>
+	
+	<body>
+		<h1>Modifier la pièce</h1>
+		
+		
+		<form method="POST">
+			<div>
+				<label>ID</label>
+				<input type="text" name="id" th:value="${ carte?.id }" />
+			</div>
+			
+			<div>
+				<input type="submit" value="Valider" />
+			</div>
+		</form>
+	</body>
+</html>
