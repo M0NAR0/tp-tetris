@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Liste des pièces</title>
+	</head>
+	
+	<body>
+		<h1>Liste des pièces</h1>
+		
+		<a href="piece/add">AJOUTER</a>
+		
+		<ul>
+			<li th:each var="piece" items="${ pieces }">
+					<!-- [[ ${ pieces.nom } ]] -->
+					[ <a th:href="@{ edit(id=${ piece.id }) }">Modifier</a> ]
+					[ <a th:href="@{ delete/{id}(id=${ piece.id }) }">Supprimer</a> ]
+			</li>
+		</ul>
+	</body>
+</html>
