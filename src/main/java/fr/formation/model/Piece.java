@@ -1,6 +1,6 @@
 package fr.formation.model;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,7 +19,7 @@ public class Piece {
 	private int id;
 	
 	@OneToMany(mappedBy = "piece")
-	private ArrayList<Block> blocks;
+	private List<Block> blocks;
 
 	public int getId() {
 		return id;
@@ -29,11 +29,11 @@ public class Piece {
 		this.id = id;
 	}
 
-	public ArrayList<Block> getBlocks() {
+	public List<Block> getBlocks() {
 		return blocks;
 	}
 
-	public void setBlocks(ArrayList<Block> blocks) {
+	public void setBlocks(List<Block> blocks) {
 		this.blocks = blocks;
 	}
 }

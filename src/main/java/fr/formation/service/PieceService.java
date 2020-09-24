@@ -2,6 +2,7 @@ package fr.formation.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import fr.formation.dao.IPieceRepository;
@@ -11,6 +12,7 @@ import fr.formation.model.Piece;
 @Service
 public class PieceService {
 
+	@Autowired
 	private IPieceRepository daoPiece;
 	
 	public List<Piece> findAll() {
