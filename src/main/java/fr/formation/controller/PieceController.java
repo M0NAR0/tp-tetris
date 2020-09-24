@@ -25,6 +25,13 @@ public class PieceController {
 		return "piece/list";
 	}
 	
+	@PostMapping("/add")
+	public String add(Piece piece) {
+		this.pieceService.add(piece);
+		
+		return "redirect:./list";
+	}
+	
 	@GetMapping("/edit")
 	public String edit(@RequestParam int id, Model model) {
 		model.addAttribute("piece", this.pieceService.findById(id));

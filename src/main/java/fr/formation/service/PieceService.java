@@ -19,6 +19,10 @@ public class PieceService {
 		return this.daoPiece.findAll();
 	}
 	
+	public void add(Piece piece) {
+		this.daoPiece.save(piece);
+	}
+	
 	public Piece findById(int id) {
 		return this.daoPiece.findById(id)
 				.orElseThrow(PieceNotFoundException::new);
